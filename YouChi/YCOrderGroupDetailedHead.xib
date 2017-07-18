@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10116"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="YVw-ez-BTc" customClass="UITableViewHeaderFooterView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view tag="1234" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="br8-1T-uxS" customClass="YCGroupSettlementHeadView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="br8-1T-uxS" firstAttribute="leading" secondItem="YVw-ez-BTc" secondAttribute="leading" id="IPP-w7-8Fs"/>
+                <constraint firstItem="br8-1T-uxS" firstAttribute="top" secondItem="YVw-ez-BTc" secondAttribute="top" id="Jcy-MG-smx"/>
+                <constraint firstAttribute="bottom" secondItem="br8-1T-uxS" secondAttribute="bottom" id="Vju-xK-ekp"/>
+                <constraint firstAttribute="trailing" secondItem="br8-1T-uxS" secondAttribute="trailing" id="ZZP-xB-ydv"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="350" y="252"/>
+        </view>
+    </objects>
+</document>

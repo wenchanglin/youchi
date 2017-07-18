@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="veH-PM-QOX">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="veH-PM-QOX" id="8PE-Ah-7Cd">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGA-gN-h7u">
+                        <rect key="frame" x="0.0" y="2" width="320" height="41"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiD-DP-nG1">
+                                <rect key="frame" x="245" y="8" width="65" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="5gG-dY-auj"/>
+                                    <constraint firstAttribute="width" constant="65" id="cO6-Gl-jnL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <inset key="titleEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="1" maxX="2" maxY="0.0"/>
+                                <state key="normal" image="关注图">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="已关注" image="已关注图">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="已关注"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AlX-t7-tKl" userLabel="line">
+                                <rect key="frame" x="0.0" y="0.0" width="2" height="41"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="2" id="gRg-RY-9WB"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="bgColor" value="dab96a"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hL6-uW-uOj" customClass="YCAvatarControl">
+                                <rect key="frame" x="17" y="8" width="221" height="25"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isClipAvatar" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="IiD-DP-nG1" secondAttribute="centerY" id="082-T8-Pec"/>
+                            <constraint firstItem="hL6-uW-uOj" firstAttribute="top" secondItem="eGA-gN-h7u" secondAttribute="top" constant="8" id="4YP-cj-34r"/>
+                            <constraint firstItem="AlX-t7-tKl" firstAttribute="leading" secondItem="eGA-gN-h7u" secondAttribute="leading" id="Iqv-9F-eXk"/>
+                            <constraint firstAttribute="bottom" secondItem="hL6-uW-uOj" secondAttribute="bottom" constant="8" id="QmF-UV-L7b"/>
+                            <constraint firstItem="AlX-t7-tKl" firstAttribute="top" secondItem="eGA-gN-h7u" secondAttribute="top" id="S1o-Q1-05d"/>
+                            <constraint firstItem="AlX-t7-tKl" firstAttribute="leading" secondItem="eGA-gN-h7u" secondAttribute="leading" id="U8h-Gj-iJA"/>
+                            <constraint firstItem="AlX-t7-tKl" firstAttribute="height" secondItem="eGA-gN-h7u" secondAttribute="height" id="VgR-bZ-8vw"/>
+                            <constraint firstAttribute="bottom" secondItem="AlX-t7-tKl" secondAttribute="bottom" id="cMe-g1-U8e"/>
+                            <constraint firstItem="IiD-DP-nG1" firstAttribute="leading" secondItem="hL6-uW-uOj" secondAttribute="trailing" constant="7" id="fkh-eg-L0X"/>
+                            <constraint firstAttribute="centerY" secondItem="AlX-t7-tKl" secondAttribute="centerY" constant="5.5" id="xFe-nK-of1"/>
+                            <constraint firstItem="hL6-uW-uOj" firstAttribute="leading" secondItem="eGA-gN-h7u" secondAttribute="leading" constant="17" id="yzj-o3-EK0"/>
+                            <constraint firstAttribute="trailing" secondItem="IiD-DP-nG1" secondAttribute="trailing" constant="10" id="zIC-A9-T4v"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="U8h-Gj-iJA"/>
+                                <exclude reference="VgR-bZ-8vw"/>
+                                <exclude reference="xFe-nK-of1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="eGA-gN-h7u" secondAttribute="bottom" id="Gjf-xm-EpA"/>
+                    <constraint firstItem="eGA-gN-h7u" firstAttribute="leading" secondItem="8PE-Ah-7Cd" secondAttribute="leading" id="Iqe-Vp-LbV"/>
+                    <constraint firstAttribute="trailing" secondItem="eGA-gN-h7u" secondAttribute="trailing" id="Rt3-3Q-AYK"/>
+                    <constraint firstItem="eGA-gN-h7u" firstAttribute="top" secondItem="8PE-Ah-7Cd" secondAttribute="top" constant="2" id="b9r-hq-Wlp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="663" y="350"/>
+        </tableViewCell>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+    </objects>
+    <resources>
+        <image name="关注图" width="69" height="22"/>
+        <image name="已关注" width="12" height="10"/>
+        <image name="已关注图" width="69" height="22"/>
+    </resources>
+</document>

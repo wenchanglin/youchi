@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view hidden="YES" contentMode="scaleToFill" id="02E-6h-7Rg" customClass="UITableViewHeaderFooterView">
+            <rect key="frame" x="0.0" y="0.0" width="445" height="49"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="历史搜索" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfg-Nu-H2m">
+                    <rect key="frame" x="10" y="19" width="52" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.15294117647058825" green="0.14901960784313725" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tjw-Rn-ESi">
+                    <rect key="frame" x="71" y="28" width="354" height="1"/>
+                    <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="dqc-5p-S9R"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Tjw-Rn-ESi" firstAttribute="leading" secondItem="Vfg-Nu-H2m" secondAttribute="trailing" constant="9" id="8xI-M1-ZG9"/>
+                <constraint firstItem="Vfg-Nu-H2m" firstAttribute="top" secondItem="02E-6h-7Rg" secondAttribute="top" constant="19" id="A6p-gN-ZbO"/>
+                <constraint firstAttribute="trailing" secondItem="Tjw-Rn-ESi" secondAttribute="trailing" constant="10" id="fdT-Hu-8CQ"/>
+                <constraint firstItem="Tjw-Rn-ESi" firstAttribute="leading" secondItem="02E-6h-7Rg" secondAttribute="leading" constant="9" id="n1U-52-weQ"/>
+                <constraint firstItem="Tjw-Rn-ESi" firstAttribute="centerY" secondItem="Vfg-Nu-H2m" secondAttribute="centerY" id="zKL-xn-lww"/>
+                <constraint firstItem="Vfg-Nu-H2m" firstAttribute="leading" secondItem="02E-6h-7Rg" secondAttribute="leading" constant="10" id="zZd-cU-HxY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="n1U-52-weQ"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="374.5" y="381.25"/>
+        </view>
+    </objects>
+</document>

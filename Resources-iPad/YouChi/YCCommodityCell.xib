@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="rVr-eg-8t2" customClass="YCCommodityCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rVr-eg-8t2" id="Weg-6K-Naf">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="167"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s04-iq-2nO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="159"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qMx-r0-z6W" userLabel="头" customClass="YCCategoryDelete">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rUp-le-i9s"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasTopLine" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hiddenBtnSel" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8y-ec-zZr" userLabel="图片" customClass="YCCommodity">
+                                <rect key="frame" x="0.0" y="30" width="320" height="93"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.71372549019999998" green="0.71372549019999998" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3VJ-YH-XFY" userLabel="加减按钮" customClass="YCMuchPrice">
+                                <rect key="frame" x="0.0" y="123" width="320" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="JNM-Kw-scu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasBottomLine" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o8y-ec-zZr" firstAttribute="leading" secondItem="s04-iq-2nO" secondAttribute="leading" id="9tb-tx-XBX"/>
+                            <constraint firstItem="qMx-r0-z6W" firstAttribute="top" secondItem="s04-iq-2nO" secondAttribute="top" id="GKK-sK-cZ2"/>
+                            <constraint firstAttribute="bottom" secondItem="3VJ-YH-XFY" secondAttribute="bottom" id="USj-39-4vk"/>
+                            <constraint firstAttribute="trailing" secondItem="qMx-r0-z6W" secondAttribute="trailing" id="aUk-8U-tXt"/>
+                            <constraint firstItem="3VJ-YH-XFY" firstAttribute="top" secondItem="o8y-ec-zZr" secondAttribute="bottom" id="dTP-MW-HU5"/>
+                            <constraint firstItem="3VJ-YH-XFY" firstAttribute="leading" secondItem="s04-iq-2nO" secondAttribute="leading" id="ti0-2v-O8I"/>
+                            <constraint firstItem="o8y-ec-zZr" firstAttribute="top" secondItem="qMx-r0-z6W" secondAttribute="bottom" id="uKu-Qe-Dwy"/>
+                            <constraint firstItem="qMx-r0-z6W" firstAttribute="leading" secondItem="s04-iq-2nO" secondAttribute="leading" id="ujP-bc-Npf"/>
+                            <constraint firstAttribute="trailing" secondItem="3VJ-YH-XFY" secondAttribute="trailing" id="vrY-oq-VRc"/>
+                            <constraint firstAttribute="trailing" secondItem="o8y-ec-zZr" secondAttribute="trailing" id="vsI-zc-3te"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="s04-iq-2nO" firstAttribute="leading" secondItem="Weg-6K-Naf" secondAttribute="leading" id="SFy-V7-Xyy"/>
+                    <constraint firstAttribute="trailing" secondItem="s04-iq-2nO" secondAttribute="trailing" id="d3M-vJ-rPQ"/>
+                    <constraint firstAttribute="bottom" secondItem="s04-iq-2nO" secondAttribute="bottom" constant="8" id="dzI-Wz-tyb"/>
+                    <constraint firstItem="s04-iq-2nO" firstAttribute="top" secondItem="Weg-6K-Naf" secondAttribute="top" id="vcj-42-Yxa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="418" y="294"/>
+        </tableViewCell>
+    </objects>
+</document>

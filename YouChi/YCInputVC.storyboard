@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ohs-9M-M0q">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--InputVC-->
+        <scene sceneID="p1t-zt-kdB">
+            <objects>
+                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="Ohs-9M-M0q" customClass="YCInputVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="MvY-4x-uIW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="d0O-0A-0RU">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="226" id="G8F-1T-4I7">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="226"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G8F-1T-4I7" id="RzK-js-pq0">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="226"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FRj-JL-8os" customClass="IQTextView">
+                                                    <rect key="frame" x="10" y="10" width="300" height="206"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="FRj-JL-8os" firstAttribute="leading" secondItem="RzK-js-pq0" secondAttribute="leading" priority="750" constant="10" id="E6g-Xo-w8i"/>
+                                                <constraint firstAttribute="trailing" secondItem="FRj-JL-8os" secondAttribute="trailing" priority="750" constant="10" id="Li6-Ux-r4I"/>
+                                                <constraint firstAttribute="bottom" secondItem="FRj-JL-8os" secondAttribute="bottom" priority="250" constant="10" id="hmf-mB-shl"/>
+                                                <constraint firstItem="FRj-JL-8os" firstAttribute="top" secondItem="RzK-js-pq0" secondAttribute="top" constant="10" id="y7b-Tm-EfL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="bgColor" value="eeeeee"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ohs-9M-M0q" id="fSl-Zy-BoT"/>
+                            <outlet property="delegate" destination="Ohs-9M-M0q" id="1WK-Vl-CBG"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="Taa-TO-gAN">
+                        <barButtonItem key="rightBarButtonItem" title="确定" id="iTY-O6-WN4">
+                            <connections>
+                                <action selector="onGoBack:" destination="Ohs-9M-M0q" id="tM3-jz-exB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="Qianming" destination="FRj-JL-8os" id="d6R-6j-3Q2"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tvb-ZS-bsN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="297" y="960"/>
+        </scene>
+    </scenes>
+</document>

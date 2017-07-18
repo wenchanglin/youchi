@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="htA-Mb-LH7">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="oDC-c1-QDu">
+            <objects>
+                <navigationController id="PEy-D2-CUb" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="R5W-hY-Jia">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="htA-Mb-LH7" kind="relationship" relationship="rootViewController" id="GnX-Li-Spw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fW5-9B-iJI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-733" y="368"/>
+        </scene>
+        <!--My OrderVCP-->
+        <scene sceneID="RY1-Pm-Xed">
+            <objects>
+                <viewController id="htA-Mb-LH7" customClass="YCMyOrderVCP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hER-Zx-MvI"/>
+                        <viewControllerLayoutGuide type="bottom" id="aGH-Da-Fh9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8fa-wO-h8H">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ElJ-L0-r62">
+                                <rect key="frame" x="0.0" y="108" width="320" height="372"/>
+                                <connections>
+                                    <segue destination="uNI-fC-Fai" kind="embed" id="ngN-IH-iUa"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V86-CB-B9d" customClass="YCSwitchTabControl">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.96420580980000004" green="0.2901960784" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="5nW-rx-dMQ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="onSwitchTabControler:" destination="htA-Mb-LH7" eventType="valueChanged" id="3uP-T3-IaU"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="V86-CB-B9d" firstAttribute="top" secondItem="hER-Zx-MvI" secondAttribute="bottom" id="8cS-Ie-PBN"/>
+                            <constraint firstItem="ElJ-L0-r62" firstAttribute="leading" secondItem="8fa-wO-h8H" secondAttribute="leading" id="FAQ-65-xWG"/>
+                            <constraint firstItem="aGH-Da-Fh9" firstAttribute="top" secondItem="ElJ-L0-r62" secondAttribute="bottom" id="MSu-Sk-A5P"/>
+                            <constraint firstItem="V86-CB-B9d" firstAttribute="leading" secondItem="8fa-wO-h8H" secondAttribute="leading" id="OwV-Cb-CuR"/>
+                            <constraint firstItem="ElJ-L0-r62" firstAttribute="top" secondItem="V86-CB-B9d" secondAttribute="bottom" id="amo-0W-U17"/>
+                            <constraint firstAttribute="trailing" secondItem="V86-CB-B9d" secondAttribute="trailing" id="foG-yU-mpv"/>
+                            <constraint firstItem="ElJ-L0-r62" firstAttribute="top" secondItem="V86-CB-B9d" secondAttribute="bottom" id="oFi-FM-Pfb"/>
+                            <constraint firstItem="ElJ-L0-r62" firstAttribute="top" secondItem="hER-Zx-MvI" secondAttribute="bottom" constant="44" id="pTG-D1-QLf"/>
+                            <constraint firstAttribute="trailing" secondItem="ElJ-L0-r62" secondAttribute="trailing" id="q4p-9n-aSA"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="amo-0W-U17"/>
+                                <exclude reference="pTG-D1-QLf"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="R4h-SN-RMh"/>
+                    <connections>
+                        <outlet property="tabControl" destination="V86-CB-B9d" id="0A5-Ef-xLN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OWj-7u-bDF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-265" y="361"/>
+        </scene>
+        <!--Tabbar Controller-->
+        <scene sceneID="5X3-zN-8EF">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="uNI-fC-Fai" customClass="YCTabbarController" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="AVb-xS-h33">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ul0-Fc-SNl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="155" y="406"/>
+        </scene>
+    </scenes>
+</document>

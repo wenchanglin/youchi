@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OgR-8L-Q3u">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--有米基地-->
+        <scene sceneID="F9S-DN-gmZ">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="OgR-8L-Q3u" customClass="YCCoinBaseVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V28-u5-6lc"/>
+                        <viewControllerLayoutGuide type="bottom" id="wvO-GL-Nzw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lcN-tu-VsO">
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0rN-jl-X54">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="OgR-8L-Q3u" id="tRl-Q2-dJM"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="0rN-jl-X54" secondAttribute="bottom" id="FDJ-Sf-ANv"/>
+                            <constraint firstItem="0rN-jl-X54" firstAttribute="top" secondItem="V28-u5-6lc" secondAttribute="bottom" id="IdN-qG-Gst"/>
+                            <constraint firstItem="0rN-jl-X54" firstAttribute="leading" secondItem="lcN-tu-VsO" secondAttribute="leading" id="eSF-YC-mhX"/>
+                            <constraint firstItem="0rN-jl-X54" firstAttribute="top" secondItem="lcN-tu-VsO" secondAttribute="top" constant="20" id="eXB-6b-KKD"/>
+                            <constraint firstAttribute="trailing" secondItem="0rN-jl-X54" secondAttribute="trailing" id="sbG-Pu-3VA"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="bgColor" value="#272636"/>
+                        </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="IdN-qG-Gst"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="有米基地" id="Rhe-a9-a4O">
+                        <barButtonItem key="rightBarButtonItem" title="刷新" id="b1k-ng-WeP">
+                            <connections>
+                                <action selector="onRefresh:" destination="OgR-8L-Q3u" id="XIr-xg-S05"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="0rN-jl-X54" id="6zB-06-9Np"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lb2-Jp-Juz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1162" y="348"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="T0u-8c-YiV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Avs-n6-Iy2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VyH-af-5HH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OgR-8L-Q3u" kind="relationship" relationship="rootViewController" id="Pph-cH-6vr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YWp-ch-Saq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="631" y="343"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,59 @@
+//
+//  PrefixHeader.pch
+//  YouChi
+//
+//  Created by sam on 16/1/21.
+//  Copyright © 2016年 Guangzhou QuicklyANT Information Technology Co.,LTD. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import <Availability.h>
+
+#ifndef __IPHONE_7_0
+#warning "This project uses features only available in iOS SDK 7.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+//#import "YouChi-Swift.h"
+#import <YYKit/YYKit.h>
+
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <MobClick.h>
+#import <AFNetworking/AFNetworking.h>
+#import <AFNetworking/UIKit+AFNetworking.h>
+#import <YQBadgeCategory/UIView+WZLBadge.h>
+#import <KMCGeigerCounter/KMCGeigerCounter.h>
+#import <JSBadgeView/JSBadgeView.h>
+#import <ACETelPrompt/ACETelPrompt.h>
+#import <LTNavigationBar/UINavigationBar+Awesome.h>
+#import <Masonry/Masonry.h>
+#import <CBAutoScrollLabel.h>
+//#import <UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
+#import <UIView+BackgroundBlurEffect.h>
+
+#import "YCView.h"
+#import "YCLinearView.h"
+#import "YCLinearInfo.h"
+#import "CollectionViewController.h"
+#import "TableViewController.h"
+
+#import "AppConstants.h"
+#import "BTConstants.h"
+#import "ProgressHUD.h"
+#import "FileOperator.h"
+#import "BLEPort.h"
+#import "BLESerialComManager.h"
+#import "IntroduceDataModel.h"
+#import "UserInfoDataModel.h"
+
+#import "ProgressPopUpView.h"
+#import "GIFImageView.h"
+#endif
+
+#endif /* PrefixHeader_pch */

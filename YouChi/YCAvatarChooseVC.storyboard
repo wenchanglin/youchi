@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sRX-St-N7Y">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Avatar ChooseVC-->
+        <scene sceneID="SFX-hB-sGc">
+            <objects>
+                <viewController storyboardIdentifier="AvatarCell" autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="sRX-St-N7Y" customClass="YCAvatarChooseVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rtg-Cq-ZF4"/>
+                        <viewControllerLayoutGuide type="bottom" id="kLT-om-UQC"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" id="tfV-nh-AcS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AcN-hO-KjV">
+                                <rect key="frame" x="0.0" y="316" width="320" height="164"/>
+                                <subviews>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zly-q7-AeP">
+                                        <rect key="frame" x="10" y="56" width="300" height="41"/>
+                                        <color key="backgroundColor" red="0.87058823529999996" green="0.75294117650000003" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="FPu-sM-Isa"/>
+                                        </constraints>
+                                        <state key="normal" title="相册">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasTopLine" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasBottomLine" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasLeftLine" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasRightLine" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onChooseAvatar:" destination="sRX-St-N7Y" eventType="touchUpInside" id="Ywm-Ar-gwr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Heo-8d-8pg">
+                                        <rect key="frame" x="10" y="10" width="300" height="41"/>
+                                        <color key="backgroundColor" red="0.87058823529999996" green="0.75294117650000003" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="6JT-8w-Yr0"/>
+                                        </constraints>
+                                        <state key="normal" title="拍照">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasTopLine" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasBottomLine" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasLeftLine" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasRightLine" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onChooseAvatar:" destination="sRX-St-N7Y" eventType="touchUpInside" id="ykd-Gm-jmP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVM-rI-Pbq">
+                                        <rect key="frame" x="10" y="113" width="300" height="41"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="uCc-yG-fF9"/>
+                                        </constraints>
+                                        <state key="normal" title="取消">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasTopLine" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasBottomLine" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasLeftLine" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasRightLine" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onClose:" destination="sRX-St-N7Y" eventType="touchUpInside" id="073-ik-SrY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Zly-q7-AeP" firstAttribute="leading" secondItem="eVM-rI-Pbq" secondAttribute="leading" id="7Mg-f1-0KK"/>
+                                    <constraint firstItem="Zly-q7-AeP" firstAttribute="top" secondItem="Heo-8d-8pg" secondAttribute="bottom" constant="5" id="7Nl-Dz-pbU"/>
+                                    <constraint firstAttribute="centerX" secondItem="Heo-8d-8pg" secondAttribute="centerX" id="BED-fD-v2P"/>
+                                    <constraint firstAttribute="bottom" secondItem="eVM-rI-Pbq" secondAttribute="bottom" constant="10" id="Ihe-kc-cRi"/>
+                                    <constraint firstAttribute="height" constant="164" id="XIH-2G-qGU"/>
+                                    <constraint firstItem="eVM-rI-Pbq" firstAttribute="top" secondItem="Zly-q7-AeP" secondAttribute="bottom" constant="5" id="Zsz-3f-LPX"/>
+                                    <constraint firstItem="Heo-8d-8pg" firstAttribute="leading" secondItem="AcN-hO-KjV" secondAttribute="leading" constant="10" id="cNV-Lw-ixa"/>
+                                    <constraint firstItem="Heo-8d-8pg" firstAttribute="top" secondItem="AcN-hO-KjV" secondAttribute="top" constant="10" id="j7z-R0-gK7"/>
+                                    <constraint firstItem="Zly-q7-AeP" firstAttribute="trailing" secondItem="eVM-rI-Pbq" secondAttribute="trailing" id="kLE-Ay-AyL"/>
+                                    <constraint firstItem="Heo-8d-8pg" firstAttribute="leading" secondItem="Zly-q7-AeP" secondAttribute="leading" id="obO-IC-u8T"/>
+                                    <constraint firstItem="Heo-8d-8pg" firstAttribute="trailing" secondItem="Zly-q7-AeP" secondAttribute="trailing" id="yQv-FU-hHE"/>
+                                    <constraint firstAttribute="trailing" secondItem="Heo-8d-8pg" secondAttribute="trailing" constant="10" id="zdh-Se-92G"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BED-fD-v2P"/>
+                                        <exclude reference="Zsz-3f-LPX"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AcN-hO-KjV" firstAttribute="leading" secondItem="tfV-nh-AcS" secondAttribute="leading" id="4S0-iR-kZG"/>
+                            <constraint firstItem="kLT-om-UQC" firstAttribute="top" secondItem="AcN-hO-KjV" secondAttribute="bottom" id="Cxu-F8-CJQ"/>
+                            <constraint firstAttribute="trailing" secondItem="AcN-hO-KjV" secondAttribute="trailing" id="sle-k8-OgW"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4DN-vP-jFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288" y="-97"/>
+        </scene>
+    </scenes>
+</document>

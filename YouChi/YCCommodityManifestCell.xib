@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="179" id="7c3-xB-1QH" customClass="YCCommodityManifestCell">
+            <rect key="frame" x="0.0" y="0.0" width="485" height="179"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7c3-xB-1QH" id="p3A-ex-Mos">
+                <rect key="frame" x="0.0" y="0.0" width="485" height="178"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFR-4R-fU8" customClass="YCCommodity">
+                        <rect key="frame" x="5" y="5" width="475" height="100"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="IBB-vl-3gE"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasTopLine" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasLeftLine" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasRightLine" value="YES"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="bgColor" value="e9e9e9"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lcc-Mf-fvA" customClass="YCOrderStatueView">
+                        <rect key="frame" x="5" y="105" width="475" height="73"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasBottomLine" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasLeftLine" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasRightLine" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasTopLine" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="lFR-4R-fU8" secondAttribute="trailing" constant="5" id="BWk-xT-GUb"/>
+                    <constraint firstAttribute="bottom" secondItem="Lcc-Mf-fvA" secondAttribute="bottom" id="EFf-8N-E6m"/>
+                    <constraint firstItem="lFR-4R-fU8" firstAttribute="leading" secondItem="p3A-ex-Mos" secondAttribute="leading" constant="5" id="U8I-oK-EpE"/>
+                    <constraint firstItem="Lcc-Mf-fvA" firstAttribute="top" secondItem="lFR-4R-fU8" secondAttribute="bottom" id="cVi-km-EEz"/>
+                    <constraint firstItem="lFR-4R-fU8" firstAttribute="top" secondItem="p3A-ex-Mos" secondAttribute="top" constant="5" id="kWT-gY-bb0"/>
+                    <constraint firstItem="Lcc-Mf-fvA" firstAttribute="trailing" secondItem="lFR-4R-fU8" secondAttribute="trailing" id="sJE-O8-5NA"/>
+                    <constraint firstItem="Lcc-Mf-fvA" firstAttribute="leading" secondItem="lFR-4R-fU8" secondAttribute="leading" id="uZx-Ju-oVW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="commodityView" destination="lFR-4R-fU8" id="cff-HO-2qi"/>
+                <outlet property="orderStatueView" destination="Lcc-Mf-fvA" id="xpV-0m-W7W"/>
+            </connections>
+            <point key="canvasLocation" x="416.5" y="323.5"/>
+        </tableViewCell>
+    </objects>
+</document>

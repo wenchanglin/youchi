@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="115" id="gKx-5u-U6i" customClass="YCReturnedMoneyCell">
+            <rect key="frame" x="0.0" y="0.0" width="336" height="125"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gKx-5u-U6i" id="DFH-Cd-q0v">
+                <rect key="frame" x="0.0" y="0.0" width="336" height="124.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rsc-FW-Y0k" customClass="YCSwitchTabControl">
+                        <rect key="frame" x="0.0" y="35" width="336" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="ilg-Ux-ic3"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="取消订单" translatesAutoresizingMaskIntoConstraints="NO" id="b5R-Jn-spR">
+                        <rect key="frame" x="8" y="10" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="Aiq-E7-7pT"/>
+                            <constraint firstAttribute="width" constant="15" id="qyH-7L-NLU"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="审核中" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Goh-VR-nrC">
+                        <rect key="frame" x="288" y="11" width="33" height="14"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                        <color key="textColor" red="0.94901960784313721" green="0.28627450980392155" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="取消订单原因：不想要" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CR9-7b-nmC">
+                        <rect key="frame" x="8" y="80" width="320" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.13725490196078433" green="0.12941176470588234" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="申请时间:2015-05-03 20:11" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuU-ux-QYI">
+                        <rect key="frame" x="197" y="106" width="131" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.396078431372549" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="取消订单" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgG-Al-yhC">
+                        <rect key="frame" x="31" y="10" width="52" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.13725490196078433" green="0.12941176470588234" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Rsc-FW-Y0k" secondAttribute="trailing" id="2AM-mF-cLD"/>
+                    <constraint firstItem="KgG-Al-yhC" firstAttribute="leading" secondItem="b5R-Jn-spR" secondAttribute="trailing" constant="8" id="3BM-LH-rKR"/>
+                    <constraint firstAttribute="trailing" secondItem="Goh-VR-nrC" secondAttribute="trailing" constant="15" id="AVK-IA-OBd"/>
+                    <constraint firstItem="b5R-Jn-spR" firstAttribute="top" secondItem="DFH-Cd-q0v" secondAttribute="top" constant="10" id="BCZ-Jk-I5q"/>
+                    <constraint firstItem="Rsc-FW-Y0k" firstAttribute="top" secondItem="DFH-Cd-q0v" secondAttribute="top" constant="35" id="DmF-BV-UQQ"/>
+                    <constraint firstAttribute="trailing" secondItem="kuU-ux-QYI" secondAttribute="trailing" constant="8" id="ELN-BP-pNK"/>
+                    <constraint firstItem="Rsc-FW-Y0k" firstAttribute="leading" secondItem="DFH-Cd-q0v" secondAttribute="leading" id="G9N-MX-0R3"/>
+                    <constraint firstAttribute="trailing" secondItem="CR9-7b-nmC" secondAttribute="trailing" constant="8" id="Ksk-Vy-ljb"/>
+                    <constraint firstItem="KgG-Al-yhC" firstAttribute="centerY" secondItem="b5R-Jn-spR" secondAttribute="centerY" id="MuX-bU-gaX"/>
+                    <constraint firstItem="b5R-Jn-spR" firstAttribute="leading" secondItem="DFH-Cd-q0v" secondAttribute="leading" constant="8" id="RGY-M7-TYw"/>
+                    <constraint firstAttribute="bottom" secondItem="kuU-ux-QYI" secondAttribute="bottom" constant="6" id="Tzg-TJ-8BR"/>
+                    <constraint firstItem="CR9-7b-nmC" firstAttribute="leading" secondItem="DFH-Cd-q0v" secondAttribute="leading" constant="8" id="ZAc-lS-vGi"/>
+                    <constraint firstItem="CR9-7b-nmC" firstAttribute="top" secondItem="Rsc-FW-Y0k" secondAttribute="bottom" constant="15" id="aLr-HC-1RR"/>
+                    <constraint firstItem="b5R-Jn-spR" firstAttribute="leading" secondItem="DFH-Cd-q0v" secondAttribute="leading" constant="8" id="cLG-2h-qvn"/>
+                    <constraint firstItem="b5R-Jn-spR" firstAttribute="top" secondItem="DFH-Cd-q0v" secondAttribute="top" constant="10" id="diW-CV-9P0"/>
+                    <constraint firstItem="Rsc-FW-Y0k" firstAttribute="top" secondItem="b5R-Jn-spR" secondAttribute="bottom" constant="10" id="sSR-67-pL9"/>
+                    <constraint firstItem="Goh-VR-nrC" firstAttribute="centerY" secondItem="b5R-Jn-spR" secondAttribute="centerY" id="tp6-Mz-3cz"/>
+                    <constraint firstItem="Rsc-FW-Y0k" firstAttribute="top" secondItem="b5R-Jn-spR" secondAttribute="bottom" constant="8" id="wo2-qM-GJ8"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasTopLine" value="YES"/>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasBottomLine" value="YES"/>
+                </userDefinedRuntimeAttributes>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="BCZ-Jk-I5q"/>
+                        <exclude reference="cLG-2h-qvn"/>
+                        <exclude reference="wo2-qM-GJ8"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lReason" destination="CR9-7b-nmC" id="ges-vQ-JFd"/>
+                <outlet property="lStatus" destination="Goh-VR-nrC" id="ivP-hM-uLQ"/>
+                <outlet property="lTime" destination="kuU-ux-QYI" id="R89-TX-hbk"/>
+                <outlet property="specialTab" destination="Rsc-FW-Y0k" id="CO8-Ax-jfp"/>
+            </connections>
+            <point key="canvasLocation" x="405" y="201.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="取消订单" width="15" height="14"/>
+    </resources>
+</document>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gzu-af-PMl">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Pay Group PurchaseVCP-->
+        <scene sceneID="aDy-Pp-I6n">
+            <objects>
+                <viewController id="gzu-af-PMl" customClass="YCPayGroupPurchaseVCP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6kA-0e-Nal"/>
+                        <viewControllerLayoutGuide type="bottom" id="hFj-vm-Dao"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NOS-MD-bzn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IY8-zM-acD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="691"/>
+                                <connections>
+                                    <segue destination="nHv-0L-9or" kind="embed" id="Jxd-qg-WKY"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3v-eD-3a2" customClass="YCGroupBottomActionBar">
+                                <rect key="frame" x="0.0" y="691" width="414" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="IJj-mP-V8k"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hFj-vm-Dao" firstAttribute="top" secondItem="p3v-eD-3a2" secondAttribute="bottom" id="8TD-Aq-qMT"/>
+                            <constraint firstAttribute="trailing" secondItem="p3v-eD-3a2" secondAttribute="trailing" id="9pY-8H-pTt"/>
+                            <constraint firstItem="IY8-zM-acD" firstAttribute="top" secondItem="NOS-MD-bzn" secondAttribute="top" id="Kii-VG-ZxV"/>
+                            <constraint firstItem="p3v-eD-3a2" firstAttribute="top" secondItem="IY8-zM-acD" secondAttribute="bottom" id="Xis-VH-igQ"/>
+                            <constraint firstItem="p3v-eD-3a2" firstAttribute="leading" secondItem="NOS-MD-bzn" secondAttribute="leading" id="evM-3y-T5H"/>
+                            <constraint firstAttribute="trailing" secondItem="IY8-zM-acD" secondAttribute="trailing" id="uA8-0k-gNO"/>
+                            <constraint firstItem="IY8-zM-acD" firstAttribute="leading" secondItem="NOS-MD-bzn" secondAttribute="leading" id="v1P-wX-Mpa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xMA-0s-szi"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="bottomBar" destination="p3v-eD-3a2" id="T0V-oF-feN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ULJ-YL-vX6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-267" y="550"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="WN3-Ap-4FK">
+            <objects>
+                <tableViewController id="nHv-0L-9or" customClass="YCPayGroupPurchaseVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="rnP-Up-gz2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.29411764709999999" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="nHv-0L-9or" id="zHP-Pm-tCQ"/>
+                            <outlet property="delegate" destination="nHv-0L-9or" id="eVC-eJ-wDD"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="4Uu-j5-fii"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Sq-Lb-7Is" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="188" y="550"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9dK-38-9B1">
+            <objects>
+                <navigationController autoresizesArchivedViewToFullSize="NO" id="4Nf-im-cpO" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ULN-W1-OhZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gzu-af-PMl" kind="relationship" relationship="rootViewController" id="OR7-hI-8SE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkO-Ft-Tg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-892" y="541"/>
+        </scene>
+    </scenes>
+</document>

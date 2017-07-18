@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4jH-b6-tc9">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="zTM-eY-6aH">
+            <objects>
+                <navigationController id="8uD-It-3Wd" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="f2H-9I-cbF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4jH-b6-tc9" kind="relationship" relationship="rootViewController" id="AxH-uv-Rt4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2G1-cD-R08" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1085" y="269"/>
+        </scene>
+        <!--My CouponVCP-->
+        <scene sceneID="iLI-n5-vbL">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="4jH-b6-tc9" customClass="YCMyCouponVCP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GG2-dj-iNT"/>
+                        <viewControllerLayoutGuide type="bottom" id="ylc-oc-dki"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GUE-Vy-lR5">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfC-LM-Y0E">
+                                <rect key="frame" x="0.0" y="44" width="320" height="372"/>
+                                <connections>
+                                    <segue destination="OTR-GJ-DUZ" kind="embed" id="1kH-Nf-9ni"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KW6-NN-5zP" customClass="YCSwitchTabControl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.52941176469999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="dAc-XF-90W"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="onSwitchTabControler:" destination="4jH-b6-tc9" eventType="valueChanged" id="93d-4X-1E6"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tfC-LM-Y0E" firstAttribute="leading" secondItem="GUE-Vy-lR5" secondAttribute="leading" id="JLn-Yj-pJe"/>
+                            <constraint firstItem="ylc-oc-dki" firstAttribute="top" secondItem="tfC-LM-Y0E" secondAttribute="bottom" id="Km4-0A-7U0"/>
+                            <constraint firstItem="tfC-LM-Y0E" firstAttribute="top" secondItem="KW6-NN-5zP" secondAttribute="bottom" id="NqU-Zh-QT7"/>
+                            <constraint firstItem="KW6-NN-5zP" firstAttribute="top" secondItem="GG2-dj-iNT" secondAttribute="bottom" id="TOc-yA-jAu"/>
+                            <constraint firstItem="KW6-NN-5zP" firstAttribute="leading" secondItem="GUE-Vy-lR5" secondAttribute="leading" id="ThD-s5-gkb"/>
+                            <constraint firstAttribute="bottom" secondItem="tfC-LM-Y0E" secondAttribute="bottom" id="Z4k-yg-d9v"/>
+                            <constraint firstAttribute="trailing" secondItem="KW6-NN-5zP" secondAttribute="trailing" id="oLu-zP-qi5"/>
+                            <constraint firstAttribute="trailing" secondItem="tfC-LM-Y0E" secondAttribute="trailing" id="uCp-Xq-XJk"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Km4-0A-7U0"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="6yU-Gp-2lD">
+                        <barButtonItem key="rightBarButtonItem" title="使用规则" id="CAo-I7-yNY"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tabControl" destination="KW6-NN-5zP" id="odW-If-5oJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O1F-FG-vdL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-703" y="269"/>
+        </scene>
+        <!--Tabbar Controller-->
+        <scene sceneID="MAl-uM-CVa">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="OTR-GJ-DUZ" customClass="YCTabbarController" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Fjh-rS-sST">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4J3-BJ-aFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-235" y="269"/>
+        </scene>
+    </scenes>
+</document>

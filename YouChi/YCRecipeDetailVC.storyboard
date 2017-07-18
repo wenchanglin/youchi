@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tL0-4H-6TK">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--秘籍-->
+        <scene sceneID="sSc-bH-xC5">
+            <objects>
+                <tableViewController title="秘籍" automaticallyAdjustsScrollViewInsets="NO" id="6NK-Ra-f4I" customClass="YCRecipeDetailVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1Or-lc-y4p">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="bgColor" value="ededed"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="dataSource" destination="6NK-Ra-f4I" id="d3c-3v-tTS"/>
+                            <outlet property="delegate" destination="6NK-Ra-f4I" id="faG-EJ-dcU"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationItem key="navigationItem" id="xkQ-KK-Vkp"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qFH-TY-EDa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="559" y="72"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xaN-gd-Isz">
+            <objects>
+                <navigationController id="NCs-wE-OMy" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2pr-5v-h8K">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tL0-4H-6TK" kind="relationship" relationship="rootViewController" id="C8l-MH-nGY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTb-p8-W6j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-297" y="70"/>
+        </scene>
+        <!--Detail ControlVCP-->
+        <scene sceneID="PE2-81-7hq">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="tL0-4H-6TK" customClass="YCDetailControlVCP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cnl-aA-lBs"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZES-xH-ncr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4qr-Dm-ug8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOq-4O-Xhe">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="434"/>
+                                <connections>
+                                    <segue destination="6NK-Ra-f4I" kind="embed" id="ZTY-rC-DIs"/>
+                                </connections>
+                            </containerView>
+                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tMr-qt-DDX" customClass="YCLeftCommentControl">
+                                <rect key="frame" x="0.0" y="434" width="320" height="46"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="FSw-bX-2tW"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.93246922350000006" green="0.93246922350000006" blue="0.93246922350000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onAct:" destination="tL0-4H-6TK" eventType="valueChanged" id="37U-f2-QFr"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ZES-xH-ncr" firstAttribute="top" secondItem="tMr-qt-DDX" secondAttribute="bottom" id="Fwy-aF-KwT"/>
+                            <constraint firstAttribute="trailing" secondItem="tMr-qt-DDX" secondAttribute="trailing" id="Kir-o6-nyq"/>
+                            <constraint firstItem="LOq-4O-Xhe" firstAttribute="leading" secondItem="4qr-Dm-ug8" secondAttribute="leading" id="QZ5-gn-Xyj"/>
+                            <constraint firstItem="tMr-qt-DDX" firstAttribute="leading" secondItem="4qr-Dm-ug8" secondAttribute="leading" id="Zpg-qN-k81"/>
+                            <constraint firstItem="LOq-4O-Xhe" firstAttribute="top" secondItem="4qr-Dm-ug8" secondAttribute="top" id="fAU-2i-6DW"/>
+                            <constraint firstItem="tMr-qt-DDX" firstAttribute="top" secondItem="LOq-4O-Xhe" secondAttribute="bottom" id="h7z-Ok-ui8"/>
+                            <constraint firstAttribute="trailing" secondItem="LOq-4O-Xhe" secondAttribute="trailing" id="zfd-rD-OpF"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationItem key="navigationItem" id="Zj7-V4-S9y">
+                        <barButtonItem key="rightBarButtonItem" image="举报按钮" id="8ce-O3-RFd">
+                            <connections>
+                                <action selector="onReport:" destination="tL0-4H-6TK" id="y43-5h-BCo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="IQLayoutGuideConstraint" destination="Fwy-aF-KwT" id="bwc-Ho-TYe"/>
+                        <outlet property="inputBar" destination="tMr-qt-DDX" id="CnL-8Y-hBZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tKA-p2-CGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="103" y="72"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="举报按钮" width="17" height="14"/>
+    </resources>
+</document>

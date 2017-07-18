@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ajW-FB-uEB">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Create Group PurchaseVCP-->
+        <scene sceneID="3cm-wz-eCW">
+            <objects>
+                <viewController id="ajW-FB-uEB" customClass="YCCreateGroupPurchaseVCP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pTC-OX-cQe"/>
+                        <viewControllerLayoutGuide type="bottom" id="UUv-sC-BT2"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" id="wvt-J8-A98">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3Q-n4-RbP">
+                                <rect key="frame" x="0.0" y="691" width="414" height="45"/>
+                                <color key="backgroundColor" red="0.76862745098039209" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="hX5-dg-quN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="确认统一发货地址并开团"/>
+                                <connections>
+                                    <action selector="onYCYCCreateGroupPurchaseV:" destination="ajW-FB-uEB" eventType="touchUpInside" id="Ijg-lc-qjM"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEu-Tj-MtU">
+                                <rect key="frame" x="0.0" y="64" width="414" height="627"/>
+                                <connections>
+                                    <segue destination="ee4-8F-dUe" kind="embed" id="G6s-HH-AJZ"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82352941176470584" green="0.82745098039215681" blue="0.83137254901960789" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="k3Q-n4-RbP" firstAttribute="leading" secondItem="wvt-J8-A98" secondAttribute="leading" id="1eK-aR-1FI"/>
+                            <constraint firstItem="uEu-Tj-MtU" firstAttribute="top" secondItem="pTC-OX-cQe" secondAttribute="bottom" id="7DR-iV-G5v"/>
+                            <constraint firstItem="k3Q-n4-RbP" firstAttribute="top" secondItem="uEu-Tj-MtU" secondAttribute="bottom" id="Hos-Rc-R6v"/>
+                            <constraint firstAttribute="trailing" secondItem="uEu-Tj-MtU" secondAttribute="trailing" id="STE-aH-YV3"/>
+                            <constraint firstItem="uEu-Tj-MtU" firstAttribute="leading" secondItem="wvt-J8-A98" secondAttribute="leading" id="YxK-c2-3oH"/>
+                            <constraint firstAttribute="trailing" secondItem="k3Q-n4-RbP" secondAttribute="trailing" id="eX8-NU-MU9"/>
+                            <constraint firstItem="UUv-sC-BT2" firstAttribute="top" secondItem="k3Q-n4-RbP" secondAttribute="bottom" id="lTY-3L-qs9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Up0-1q-d7Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lpK-ow-2zA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-266" y="533"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="2pL-X9-6Ty">
+            <objects>
+                <tableViewController id="ee4-8F-dUe" customClass="YCCreateGroupPurchaseVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="aCr-vs-zM8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="ee4-8F-dUe" id="MXn-49-qnb"/>
+                            <outlet property="delegate" destination="ee4-8F-dUe" id="jiv-k5-bp0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="vFG-vJ-cmt"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nDF-Jj-hkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="323" y="533"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xNc-2I-c2o">
+            <objects>
+                <navigationController autoresizesArchivedViewToFullSize="NO" id="Toj-80-b50" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oal-dQ-ehS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ajW-FB-uEB" kind="relationship" relationship="rootViewController" id="Tkq-Y5-AAs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zdE-y7-M9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-810" y="541"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="155" id="HEb-Au-p2P" customClass="YCCancelOrderComdityCell">
+            <rect key="frame" x="0.0" y="0.0" width="338" height="155"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HEb-Au-p2P" id="DBb-z3-fol">
+                <rect key="frame" x="0.0" y="0.0" width="338" height="154.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbA-nc-lRV" customClass="YCCategoryDelete">
+                        <rect key="frame" x="0.0" y="0.0" width="338" height="30"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ubc-2D-lC0">
+                                <rect key="frame" x="8" y="8" width="20" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="qhy-1f-cmp"/>
+                                    <constraint firstAttribute="height" constant="15" id="vxT-hu-tt6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="SUw-xg-61Z"/>
+                            <constraint firstItem="Ubc-2D-lC0" firstAttribute="centerY" secondItem="dbA-nc-lRV" secondAttribute="centerY" id="tHp-B2-C8W"/>
+                            <constraint firstItem="Ubc-2D-lC0" firstAttribute="leading" secondItem="dbA-nc-lRV" secondAttribute="leading" constant="8" id="w2L-Bk-VAS"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="hiddenBtnSel" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasTopLine" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tk5-IT-mUh" customClass="YCMuchPrice">
+                        <rect key="frame" x="0.0" y="113" width="338" height="36"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="j9p-Kf-Yhd"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="hiddenBtnMuch" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasBottomLine" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sTM-W4-WLv" customClass="YCCommodity">
+                        <rect key="frame" x="0.0" y="30" width="338" height="83"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasBottomLine" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasTopLine" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="sTM-W4-WLv" firstAttribute="top" secondItem="dbA-nc-lRV" secondAttribute="bottom" id="1GU-6e-KZ5"/>
+                    <constraint firstItem="dbA-nc-lRV" firstAttribute="leading" secondItem="DBb-z3-fol" secondAttribute="leading" id="5fC-cP-dOJ"/>
+                    <constraint firstAttribute="trailing" secondItem="sTM-W4-WLv" secondAttribute="trailing" id="C1t-cm-kga"/>
+                    <constraint firstAttribute="bottom" secondItem="Tk5-IT-mUh" secondAttribute="bottom" constant="5" id="O2i-xE-ePW"/>
+                    <constraint firstAttribute="trailing" secondItem="dbA-nc-lRV" secondAttribute="trailing" id="QFM-dB-lac"/>
+                    <constraint firstItem="Tk5-IT-mUh" firstAttribute="top" secondItem="sTM-W4-WLv" secondAttribute="bottom" id="Twm-sg-aAa"/>
+                    <constraint firstAttribute="trailing" secondItem="Tk5-IT-mUh" secondAttribute="trailing" id="Xq2-ey-33X"/>
+                    <constraint firstItem="sTM-W4-WLv" firstAttribute="leading" secondItem="DBb-z3-fol" secondAttribute="leading" id="Y5T-y7-qtj"/>
+                    <constraint firstItem="dbA-nc-lRV" firstAttribute="top" secondItem="DBb-z3-fol" secondAttribute="top" id="ia1-1Y-lw1"/>
+                    <constraint firstItem="Tk5-IT-mUh" firstAttribute="leading" secondItem="DBb-z3-fol" secondAttribute="leading" id="qM3-id-ZUe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="vCommodity" destination="sTM-W4-WLv" id="nsa-C8-LuG"/>
+                <outlet property="vGoodsName" destination="dbA-nc-lRV" id="TtU-rf-vSh"/>
+                <outlet property="vTotalPrice" destination="Tk5-IT-mUh" id="Xdk-c3-oYY"/>
+            </connections>
+            <point key="canvasLocation" x="483" y="349.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="logo-1" width="20" height="14"/>
+    </resources>
+</document>

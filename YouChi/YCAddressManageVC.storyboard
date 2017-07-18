@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DuZ-PW-dwY">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="cNL-b5-iNx">
+            <objects>
+                <navigationController id="oRG-pe-Fkm" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZDK-pR-DGF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="DuZ-PW-dwY" kind="relationship" relationship="rootViewController" id="7e1-i3-eWM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jp1-er-XS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-276" y="178"/>
+        </scene>
+        <!--Address ManageVCP-->
+        <scene sceneID="cob-PI-zjz">
+            <objects>
+                <viewController id="DuZ-PW-dwY" customClass="YCAddressManageVCP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mo1-hO-qdS"/>
+                        <viewControllerLayoutGuide type="bottom" id="m53-xT-uRT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qQo-vH-Hig">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KVN-qe-Idx">
+                                <rect key="frame" x="0.0" y="64" width="320" height="372"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="hP7-1j-6uk" kind="embed" id="piK-SL-6Yx"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOx-wT-6RF">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.85490196080000003" green="0.72549019609999998" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="添加新地址">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCreateNewAddress:" destination="DuZ-PW-dwY" eventType="touchUpInside" id="RB3-io-lHi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gOx-wT-6RF" secondAttribute="trailing" id="1ad-qS-s2B"/>
+                            <constraint firstItem="gOx-wT-6RF" firstAttribute="top" secondItem="KVN-qe-Idx" secondAttribute="bottom" id="M0C-kd-ahT"/>
+                            <constraint firstItem="gOx-wT-6RF" firstAttribute="leading" secondItem="qQo-vH-Hig" secondAttribute="leading" id="Pr4-k5-vEd"/>
+                            <constraint firstItem="m53-xT-uRT" firstAttribute="top" secondItem="gOx-wT-6RF" secondAttribute="bottom" id="Rei-Jt-afs"/>
+                            <constraint firstItem="KVN-qe-Idx" firstAttribute="leading" secondItem="qQo-vH-Hig" secondAttribute="leading" id="hXR-w3-2WZ"/>
+                            <constraint firstItem="m53-xT-uRT" firstAttribute="top" secondItem="KVN-qe-Idx" secondAttribute="bottom" constant="44" id="nue-iK-Zkl"/>
+                            <constraint firstItem="KVN-qe-Idx" firstAttribute="top" secondItem="mo1-hO-qdS" secondAttribute="bottom" id="s9w-uQ-F1o"/>
+                            <constraint firstAttribute="trailing" secondItem="KVN-qe-Idx" secondAttribute="trailing" id="xMU-fi-ID0"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="bgColor" value="#EDEDED"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="e3c-Hg-vCd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJG-fn-2mI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200" y="168"/>
+        </scene>
+        <!--Address ManageVC-->
+        <scene sceneID="Jx7-Xu-3Fg">
+            <objects>
+                <tableViewController id="hP7-1j-6uk" customClass="YCAddressManageVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="6GU-IO-376">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="hP7-1j-6uk" id="7Rx-dL-jat"/>
+                            <outlet property="delegate" destination="hP7-1j-6uk" id="t6N-hz-GxI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="SiE-PO-wg8"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="89T-8c-FmK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="601" y="168"/>
+        </scene>
+    </scenes>
+</document>

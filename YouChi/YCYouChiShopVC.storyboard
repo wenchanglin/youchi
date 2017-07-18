@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OtB-GG-U9F">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="vDx-sR-535">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OtB-GG-U9F" customClass="YCNavigationController" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZWb-MW-2Dw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Afs-bs-4tP" kind="relationship" relationship="rootViewController" id="uEW-nJ-KL8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RNy-pm-LIA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798" y="2482"/>
+        </scene>
+        <!--You Chi Shop PopVC-->
+        <scene sceneID="jiQ-9U-e5u">
+            <objects>
+                <viewController storyboardIdentifier="YCYouChiShopPopVC" id="Pea-zQ-dvS" customClass="YCYouChiShopPopVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HCy-UH-cmG"/>
+                        <viewControllerLayoutGuide type="bottom" id="8ss-iv-gT4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4QZ-Xu-OdV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0T8-sI-GY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008" y="1892"/>
+        </scene>
+        <!--You Chi ShopVCP-->
+        <scene sceneID="O8P-A9-8j8">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Afs-bs-4tP" customClass="YCYouChiShopVCP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v1W-7k-fJE"/>
+                        <viewControllerLayoutGuide type="bottom" id="xZQ-Kw-K7F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="euN-yC-dpN">
+                        <rect key="frame" x="0.0" y="64" width="320" height="372"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nd6-uu-Mhr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
+                                <connections>
+                                    <segue destination="LFz-Ob-O2N" kind="embed" id="mWR-ql-aaN"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yT8-L3-DH0" customClass="YCContainerControl">
+                                <rect key="frame" x="252" y="112" width="60" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="70S-vj-7qn"/>
+                                    <constraint firstAttribute="height" constant="200" id="Y9G-hJ-ui7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nd6-uu-Mhr" firstAttribute="top" secondItem="euN-yC-dpN" secondAttribute="top" id="MpW-dm-Pkr"/>
+                            <constraint firstItem="nd6-uu-Mhr" firstAttribute="leading" secondItem="euN-yC-dpN" secondAttribute="leading" id="ih0-MB-GJB"/>
+                            <constraint firstItem="xZQ-Kw-K7F" firstAttribute="top" secondItem="nd6-uu-Mhr" secondAttribute="bottom" id="nkI-Jp-dck"/>
+                            <constraint firstAttribute="trailing" secondItem="nd6-uu-Mhr" secondAttribute="trailing" id="oDC-Nd-AmJ"/>
+                            <constraint firstAttribute="trailing" secondItem="yT8-L3-DH0" secondAttribute="trailing" constant="8" id="p4Z-2v-Ql6"/>
+                            <constraint firstItem="xZQ-Kw-K7F" firstAttribute="top" secondItem="yT8-L3-DH0" secondAttribute="bottom" constant="60" id="pBz-K2-1mp"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="aq9-5d-XPh">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="gM5-yL-oJn">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CR1-IH-5Pm">
+                                <rect key="frame" x="16" y="11" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="消息"/>
+                                <connections>
+                                    <action selector="onPuMessage:" destination="Afs-bs-4tP" eventType="touchUpInside" id="cXW-5a-VSj"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="扫" id="ogR-Cp-l3F">
+                            <connections>
+                                <action selector="onQCode:" destination="Afs-bs-4tP" id="WZL-Xm-TOr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="btnMessage" destination="CR1-IH-5Pm" id="JTO-hh-115"/>
+                        <outlet property="floatBar" destination="yT8-L3-DH0" id="MQf-sS-WoY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iQE-C7-cal" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1252" y="2482"/>
+        </scene>
+        <!--You Chi ShopVC-->
+        <scene sceneID="x2K-bW-phh">
+            <objects>
+                <tableViewController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" id="LFz-Ob-O2N" customClass="YCYouChiShopVC" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="109" sectionHeaderHeight="22" sectionFooterHeight="22" id="v3J-D8-8Ab">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <sections/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="bgColor" value="eeeeee"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="dataSource" destination="LFz-Ob-O2N" id="5NN-LN-FTI"/>
+                            <outlet property="delegate" destination="LFz-Ob-O2N" id="2iw-BB-yIY"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="t0Z-w2-4Ee">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oem-hN-p6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1672" y="2482"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="扫" width="16" height="15"/>
+        <image name="消息" width="22" height="17"/>
+    </resources>
+</document>

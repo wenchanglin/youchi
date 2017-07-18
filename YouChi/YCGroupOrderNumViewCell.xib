@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="YCGroupOrderNumViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmD-Ae-qD8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iLk-eX-Pww" customClass="YCGroupOrderNumView">
+                                <rect key="frame" x="20" y="0.0" width="300" height="38"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iLk-eX-Pww" firstAttribute="leading" secondItem="kmD-Ae-qD8" secondAttribute="leading" constant="20" id="9ZY-H9-Z1W"/>
+                            <constraint firstAttribute="trailing" secondItem="iLk-eX-Pww" secondAttribute="trailing" id="9k4-Vd-FIO"/>
+                            <constraint firstItem="iLk-eX-Pww" firstAttribute="top" secondItem="kmD-Ae-qD8" secondAttribute="top" id="cpi-bE-Ld8"/>
+                            <constraint firstAttribute="bottom" secondItem="iLk-eX-Pww" secondAttribute="bottom" id="fer-eM-PwW"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasBottomLine" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="kmD-Ae-qD8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3zY-OR-BAc"/>
+                    <constraint firstAttribute="bottom" secondItem="kmD-Ae-qD8" secondAttribute="bottom" constant="5" id="jY5-wZ-MNu"/>
+                    <constraint firstItem="kmD-Ae-qD8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qts-Qu-2ZN"/>
+                    <constraint firstAttribute="trailing" secondItem="kmD-Ae-qD8" secondAttribute="trailing" id="zxP-LW-kNv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="groupOrderNumView" destination="iLk-eX-Pww" id="aXO-0j-sFZ"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

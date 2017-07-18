@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EDt-jb-muN">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="3ii-Fp-ckg">
+            <objects>
+                <navigationController autoresizesArchivedViewToFullSize="NO" id="MME-Sd-3e3" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="736"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pMt-Rz-K4i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EDt-jb-muN" kind="relationship" relationship="rootViewController" id="udX-eK-SUo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vO3-Nz-1Nh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1" y="476"/>
+        </scene>
+        <!--Shop Category NameVCP-->
+        <scene sceneID="nWK-b9-kAb">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="EDt-jb-muN" customClass="YCShopCategoryNameVCP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wwQ-7q-4MR"/>
+                        <viewControllerLayoutGuide type="bottom" id="deG-ea-KSC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n6H-NO-nFJ">
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wzc-vM-MyF" customClass="YCSwitchTabControl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="gOf-jS-kCc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasBottomLine" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onSwitchTabControler:" destination="EDt-jb-muN" eventType="valueChanged" id="M7f-sz-1BH"/>
+                                </connections>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pT1-BL-Q6Y">
+                                <rect key="frame" x="0.0" y="44" width="414" height="628"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="gjb-Df-OSb" kind="embed" id="agp-Dh-Ggb"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="pT1-BL-Q6Y" secondAttribute="bottom" id="3OF-LE-d08"/>
+                            <constraint firstItem="pT1-BL-Q6Y" firstAttribute="leading" secondItem="n6H-NO-nFJ" secondAttribute="leading" id="987-WN-6ib"/>
+                            <constraint firstItem="Wzc-vM-MyF" firstAttribute="leading" secondItem="n6H-NO-nFJ" secondAttribute="leading" id="PhN-RM-Uji"/>
+                            <constraint firstAttribute="trailing" secondItem="pT1-BL-Q6Y" secondAttribute="trailing" id="QL4-Dr-Q6y"/>
+                            <constraint firstAttribute="trailing" secondItem="Wzc-vM-MyF" secondAttribute="trailing" id="UAo-v1-RqX"/>
+                            <constraint firstItem="pT1-BL-Q6Y" firstAttribute="top" secondItem="Wzc-vM-MyF" secondAttribute="bottom" id="Uz5-SO-28Z"/>
+                            <constraint firstItem="Wzc-vM-MyF" firstAttribute="top" secondItem="wwQ-7q-4MR" secondAttribute="bottom" id="YUf-df-iIg"/>
+                            <constraint firstItem="deG-ea-KSC" firstAttribute="top" secondItem="pT1-BL-Q6Y" secondAttribute="bottom" id="dbh-8R-fjJ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="bgColor" value="#EDEDED"/>
+                        </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="dbh-8R-fjJ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="5i4-s0-3fo">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" image="购物车-小" id="oro-qg-iog">
+                            <connections>
+                                <action selector="pushToMyCart:" destination="EDt-jb-muN" id="eye-Jy-FDP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tabControl" destination="Wzc-vM-MyF" id="gud-AC-p4c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="thy-SA-wqT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="476"/>
+        </scene>
+        <!--Tabbar Controller-->
+        <scene sceneID="330-nm-Ewk">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gjb-Df-OSb" customClass="YCTabbarController" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="gNT-hA-DkI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ShK-Uf-cSd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952" y="431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="购物车-小" width="17" height="16"/>
+    </resources>
+</document>

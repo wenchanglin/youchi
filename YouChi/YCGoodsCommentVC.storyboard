@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CQ6-JN-7rt">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="YhJ-hF-dzZ">
+            <objects>
+                <navigationController id="gOi-7e-Mwt" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DjL-ff-Fyr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CQ6-JN-7rt" kind="relationship" relationship="rootViewController" id="czD-ho-jPT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ClW-us-sLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-137" y="222"/>
+        </scene>
+        <!--Goods CommentVC-->
+        <scene sceneID="Ojj-HO-ikp">
+            <objects>
+                <tableViewController id="CQ6-JN-7rt" customClass="YCGoodsCommentVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ALs-jq-qb5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="CQ6-JN-7rt" id="eLf-Lx-B6B"/>
+                            <outlet property="delegate" destination="CQ6-JN-7rt" id="9Cx-sQ-Mn0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="v9c-8H-AkH">
+                        <barButtonItem key="rightBarButtonItem" image="购物车-小" id="4Ah-P9-QPX">
+                            <connections>
+                                <action selector="myCart:" destination="CQ6-JN-7rt" id="L7A-Wd-O31"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XNN-MC-xgM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="310" y="200"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="购物车-小" width="17" height="16"/>
+    </resources>
+</document>

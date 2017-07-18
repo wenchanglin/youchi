@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qw3-gP-GZ3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="uMO-dW-lCf">
+            <objects>
+                <navigationController autoresizesArchivedViewToFullSize="NO" id="skn-NN-mHf" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="736"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DLa-aV-gig">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qw3-gP-GZ3" kind="relationship" relationship="rootViewController" id="hJR-XL-sOZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XFX-p4-oQ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-137" y="297"/>
+        </scene>
+        <!--PayVCP-->
+        <scene sceneID="vzY-QR-N7P">
+            <objects>
+                <viewController autoresizesArchivedViewToFullSize="NO" id="qw3-gP-GZ3" customClass="YCPayVCP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RPk-m7-PC8"/>
+                        <viewControllerLayoutGuide type="bottom" id="x9d-JQ-GJx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PS9-Qr-jTk">
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKO-8k-2Wn">
+                                <rect key="frame" x="0.0" y="623" width="414" height="49"/>
+                                <color key="backgroundColor" red="1" green="0.60392156860000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="7Cd-by-Pdm"/>
+                                </constraints>
+                                <state key="normal" title="马上充值">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPay:" destination="qw3-gP-GZ3" eventType="touchUpInside" id="2XS-BZ-Lo5"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fvz-JZ-fnY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="596"/>
+                                <connections>
+                                    <segue destination="2l1-l6-Nez" kind="embed" id="oQY-nl-9wu"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44c-Y9-cPv">
+                                <rect key="frame" x="0.0" y="596" width="414" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="查看充值卷使用规则细规">
+                                    <color key="titleColor" red="0.13725490196078433" green="0.12941176470588234" blue="0.20000000000000001" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLookAtPay:" destination="qw3-gP-GZ3" eventType="touchUpInside" id="lcm-LE-4l9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eKO-8k-2Wn" firstAttribute="top" secondItem="Fvz-JZ-fnY" secondAttribute="bottom" constant="50" id="2Zy-ru-Pww"/>
+                            <constraint firstItem="44c-Y9-cPv" firstAttribute="leading" secondItem="PS9-Qr-jTk" secondAttribute="leading" id="9cg-rD-Xwf"/>
+                            <constraint firstAttribute="trailing" secondItem="44c-Y9-cPv" secondAttribute="trailing" id="MLp-ov-E64"/>
+                            <constraint firstItem="eKO-8k-2Wn" firstAttribute="top" secondItem="44c-Y9-cPv" secondAttribute="bottom" id="NOd-zO-ELQ"/>
+                            <constraint firstItem="Fvz-JZ-fnY" firstAttribute="leading" secondItem="PS9-Qr-jTk" secondAttribute="leading" id="XVg-hf-Gqq"/>
+                            <constraint firstAttribute="trailing" secondItem="Fvz-JZ-fnY" secondAttribute="trailing" id="YRu-EJ-zik"/>
+                            <constraint firstAttribute="trailing" secondItem="eKO-8k-2Wn" secondAttribute="trailing" id="bpA-I3-nlh"/>
+                            <constraint firstItem="eKO-8k-2Wn" firstAttribute="leading" secondItem="PS9-Qr-jTk" secondAttribute="leading" id="hds-q3-Pq3"/>
+                            <constraint firstItem="x9d-JQ-GJx" firstAttribute="top" secondItem="eKO-8k-2Wn" secondAttribute="bottom" id="lDa-bo-edJ"/>
+                            <constraint firstItem="44c-Y9-cPv" firstAttribute="centerX" secondItem="PS9-Qr-jTk" secondAttribute="centerX" id="nFd-JC-OS4"/>
+                            <constraint firstItem="Fvz-JZ-fnY" firstAttribute="top" secondItem="RPk-m7-PC8" secondAttribute="bottom" id="qAu-qZ-baf"/>
+                            <constraint firstItem="44c-Y9-cPv" firstAttribute="top" secondItem="Fvz-JZ-fnY" secondAttribute="bottom" id="yZh-An-UjT"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2Zy-ru-Pww"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="gfo-M2-zZR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5lF-du-UgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="384" y="299"/>
+        </scene>
+        <!--PayVC-->
+        <scene sceneID="CYT-6k-8Kr">
+            <objects>
+                <tableViewController id="2l1-l6-Nez" customClass="YCPayVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="RVL-mm-VZh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="596"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="utg-Ix-0Dq">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="c1" rowHeight="200" id="mAN-U8-M9C">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mAN-U8-M9C" id="Ubz-UK-iIK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="充值banner" translatesAutoresizingMaskIntoConstraints="NO" id="eDS-tr-SY2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="eDS-tr-SY2" secondAttribute="trailing" id="5cw-Fx-yXs"/>
+                                                <constraint firstAttribute="bottom" secondItem="eDS-tr-SY2" secondAttribute="bottom" id="NYe-2r-8Og"/>
+                                                <constraint firstItem="eDS-tr-SY2" firstAttribute="top" secondItem="Ubz-UK-iIK" secondAttribute="top" id="bym-tl-vgf"/>
+                                                <constraint firstItem="eDS-tr-SY2" firstAttribute="leading" secondItem="Ubz-UK-iIK" secondAttribute="leading" id="kTm-ce-l9Z"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="c2" rowHeight="56" id="gdo-bU-r55">
+                                        <rect key="frame" x="0.0" y="200" width="414" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gdo-bU-r55" id="pUR-io-7CR">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   请输入充值卡号码" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ljw-lb-C1m">
+                                                    <rect key="frame" x="15" y="10" width="384" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="lJz-oJ-SxV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="0.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="0.51372549019607838" green="0.51372549019607838" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ljw-lb-C1m" firstAttribute="centerY" secondItem="pUR-io-7CR" secondAttribute="centerY" id="8bH-H6-ns5"/>
+                                                <constraint firstAttribute="trailing" secondItem="ljw-lb-C1m" secondAttribute="trailing" constant="15" id="kD4-Y0-1V5"/>
+                                                <constraint firstItem="ljw-lb-C1m" firstAttribute="leading" secondItem="pUR-io-7CR" secondAttribute="leading" constant="15" id="uvb-vG-1JB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="c3" rowHeight="35" id="FLJ-Vf-w8f">
+                                        <rect key="frame" x="0.0" y="256" width="414" height="35"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FLJ-Vf-w8f" id="AQT-RV-QOq">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8d8-2E-fWl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
+                                                    <color key="backgroundColor" red="0.10196078431372549" green="0.094117647058823528" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" title="扫一扫更方便" image="充值扫一扫"/>
+                                                    <connections>
+                                                        <action selector="onQRCode:" destination="2l1-l6-Nez" eventType="touchUpInside" id="S8S-wf-wxU"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="8d8-2E-fWl" secondAttribute="trailing" id="2P6-0h-llm"/>
+                                                <constraint firstItem="8d8-2E-fWl" firstAttribute="top" secondItem="AQT-RV-QOq" secondAttribute="top" id="8Uv-3D-Qmy"/>
+                                                <constraint firstAttribute="bottom" secondItem="8d8-2E-fWl" secondAttribute="bottom" id="PMN-P0-lRN"/>
+                                                <constraint firstItem="8d8-2E-fWl" firstAttribute="leading" secondItem="AQT-RV-QOq" secondAttribute="leading" id="icT-HZ-oFP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="2l1-l6-Nez" id="e0b-CH-SQQ"/>
+                            <outlet property="delegate" destination="2l1-l6-Nez" id="ZNh-Do-VZ5"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="PayNumber" destination="ljw-lb-C1m" id="odp-3H-fQG"/>
+                        <outlet property="img" destination="eDS-tr-SY2" id="9oO-bf-6UG"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c96-cd-uir" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="296.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="充值banner" width="750" height="390"/>
+        <image name="充值扫一扫" width="16" height="14"/>
+    </resources>
+</document>

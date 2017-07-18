@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="129" id="Q8Q-UL-Csq" customClass="YCCancelOrderCell">
+            <rect key="frame" x="0.0" y="0.0" width="344" height="129"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q8Q-UL-Csq" id="Ufy-3Q-xfx">
+                <rect key="frame" x="0.0" y="0.0" width="344" height="128"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g1e-Q5-xEy" customClass="IQTextView">
+                        <rect key="frame" x="0.0" y="0.0" width="344" height="128"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="g1e-Q5-xEy" secondAttribute="bottom" id="9YT-mM-kuw"/>
+                    <constraint firstAttribute="trailing" secondItem="g1e-Q5-xEy" secondAttribute="trailing" id="Arx-4b-2lS"/>
+                    <constraint firstItem="g1e-Q5-xEy" firstAttribute="top" secondItem="Ufy-3Q-xfx" secondAttribute="top" id="RVb-Bk-6dE"/>
+                    <constraint firstItem="g1e-Q5-xEy" firstAttribute="leading" secondItem="Ufy-3Q-xfx" secondAttribute="leading" id="gRY-Tb-mMr"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasTopLine" value="YES"/>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasBottomLine" value="YES"/>
+                </userDefinedRuntimeAttributes>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lReason" destination="g1e-Q5-xEy" id="aSD-Gs-cbV"/>
+            </connections>
+            <point key="canvasLocation" x="346" y="187.5"/>
+        </tableViewCell>
+    </objects>
+</document>

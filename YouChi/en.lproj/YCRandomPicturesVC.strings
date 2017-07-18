@@ -1,0 +1,18 @@
+
+/* Class = "UIBarButtonItem"; title = "发布"; ObjectID = "0ui-fe-x1R"; */
+"0ui-fe-x1R.title" = "发布";
+
+/* Class = "UILabel"; text = "地理位置"; ObjectID = "Cyr-c6-8Ut"; */
+"Cyr-c6-8Ut.text" = "地理位置";
+
+/* Class = "UITextField"; placeholder = "搜索"; ObjectID = "Fg2-Xy-glD"; */
+"Fg2-Xy-glD.placeholder" = "搜索";
+
+/* Class = "UIButton"; normalTitle = "搜索"; ObjectID = "MtF-kv-4w8"; */
+"MtF-kv-4w8.normalTitle" = "搜索";
+
+/* Class = "UITextField"; placeholder = "食材名称"; ObjectID = "bJ4-MD-3Ls"; */
+"bJ4-MD-3Ls.placeholder" = "食材名称";
+
+/* Class = "UINavigationItem"; title = "食材产地"; ObjectID = "i7Z-sj-jbA"; */
+"i7Z-sj-jbA.title" = "食材产地";
